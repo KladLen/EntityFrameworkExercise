@@ -4,14 +4,14 @@ using Pizza.Models;
 using EFContext context = new EFContext();
 
 Product pizza = new Product();
-pizza.addProduct("Diavola", 20M);
+//pizza.addProduct("Diavola", 20M);
 
-//deleteProductById(6);
+pizza.updatePrice("Funghi", 9.99M);
 //updatePrice("Pepperoni", 8.99M);
 
 //var products = context.Products.Where(p => p.Price < 9M).OrderBy(p => p.Price);
 var products = from product in context.Products
-               where product.Price < 9M
+               where product.Price > 9M
                orderby product.Name
                select product;
 
@@ -31,7 +31,7 @@ static void addProduct(string name, decimal price)
     };
     context.Products.Add(product);
     context.SaveChanges();
-}*/
+}
 
 static void deleteProductById(int id)
 {
@@ -56,4 +56,4 @@ static void updatePrice(string name, decimal price)
         Console.WriteLine($"Pizza with name {name} doesn't exist in database.");
     }
     context.SaveChanges();
-}
+}*/
