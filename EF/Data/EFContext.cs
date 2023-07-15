@@ -14,5 +14,6 @@ namespace Pizza.Data
         {
             optionsBuilder.UseSqlServer(@"Server=DESKTOP-00R7P8O\SQLEXPRESS; Database=WPFapplications; Integrated Security=True; TrustServerCertificate=True;");
         }
+        
     }
 }

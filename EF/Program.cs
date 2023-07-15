@@ -3,7 +3,9 @@ using Pizza.Models;
 
 using EFContext context = new EFContext();
 
-//addProduct("Marinara", 6M);
+Product pizza = new Product();
+pizza.addProduct("Diavola", 20M);
+
 //deleteProductById(6);
 //updatePrice("Pepperoni", 8.99M);
 
@@ -18,6 +20,7 @@ foreach (var p in products)
     Console.WriteLine(p.Name + " - " + p.Price.ToString());
 }
 
+/*
 static void addProduct(string name, decimal price)
 {
     using EFContext context = new EFContext();
@@ -28,7 +31,8 @@ static void addProduct(string name, decimal price)
     };
     context.Products.Add(product);
     context.SaveChanges();
-}
+}*/
+
 static void deleteProductById(int id)
 {
     using EFContext contex = new EFContext();
