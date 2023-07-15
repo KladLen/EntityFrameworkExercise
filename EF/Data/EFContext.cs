@@ -12,7 +12,7 @@ namespace Pizza.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=DESKTOP-00R7P8O\SQLEXPRESS; Database=WPFapplications; Integrated Security =True; TrustServerCertificate=True;");
+            optionsBuilder.UseSqlServer(@"Server=DESKTOP-00R7P8O\SQLEXPRESS; Database=WPFapplications; Integrated Security=True; TrustServerCertificate=True;");
         }
     }
 }
